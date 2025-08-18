@@ -1,26 +1,27 @@
-// replace_char.c
 #include <stdio.h>
-#include <string.h>
 
-int main() {
-    char line[300];
-    char str[200];
-    char ch1, ch2;
-
-    // Lire la ligne entière : chaîne + deux caractères
-    fgets(line, sizeof(line), stdin);
+int main(void) {
+    char str[100];
+    char oldChar, newChar;
+    int i = 0;
 
     
-    // On suppose format : chaîne (sans espace) + ' ' + char + ' ' + char
-    sscanf(line, "%s %c %c", str, &ch1, &ch2);
+    fgets(str, sizeof(str), stdin);
 
-    // Remplacer dans la chaîne
-    for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] == ch1) {
-            str[i] = ch2;
+   
+    scanf(" %c", &oldChar);  // espace avant %c pour ignorer les retours à la ligne
+
+   
+    scanf(" %c", &newChar);
+
+    while (str[i] != '\0') {
+        if (str[i] == oldChar) {
+            str[i] = newChar;
         }
+        i++;
     }
 
     printf("Résultat : %s\n", str);
+
     return 0;
 }
