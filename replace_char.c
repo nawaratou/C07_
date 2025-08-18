@@ -10,7 +10,7 @@ int main() {
     // Lire la ligne entière : chaîne + deux caractères
     fgets(line, sizeof(line), stdin);
 
-    // Extraire la chaîne et les deux caractères
+    
     // On suppose format : chaîne (sans espace) + ' ' + char + ' ' + char
     sscanf(line, "%s %c %c", str, &ch1, &ch2);
 
