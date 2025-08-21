@@ -21,7 +21,7 @@ int main(void) {
         i++;
     }
 
-    printf("Résultat : %s\n", str);
+    printf( " %s", str);
 
     return 0;
 }
