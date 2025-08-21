@@ -9,10 +9,10 @@ int main(void) {
     fgets(str, sizeof(str), stdin);
 
    
-    scanf(" %c", &oldChar);  // espace avant %c pour ignorer les retours à la ligne
+    scanf("%c", &oldChar);  // espace avant %c pour ignorer les retours à la ligne
 
    
-    scanf(" %c", &newChar);
+    scanf("%c", &newChar);
 
     while (str[i] != '\0') {
         if (str[i] == oldChar) {
@@ -21,7 +21,7 @@ int main(void) {
         i++;
     }
 
-    printf( " %s", str);
+    printf( "%s", str);
 
     return 0;
 }
